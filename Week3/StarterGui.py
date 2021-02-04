@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jan 22 04:10:42 2021
-
-@author: Chris
-"""
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 22 02:29:46 2021
-
-@author: Chris
+Starter Gui
+Assumes you made a .ui file already
+To make life easier, please be sure that the .ui file, this .py file, 
+and any image files etc. attached to your design Gui are all together 
+in one folder.  Run this program from that folder
+Default on windows is ..\spyder-py3 
 """
 
 #First, we need to import some things
@@ -33,16 +30,13 @@ class Ui(QtWidgets.QMainWindow):
  #------------------------------------------------------------------------       
 #these last lines launch the app.      
      
-#It turns out the very last line, app.exec has some issues in spyder
-#for now we can comment it (quick fix, not ideal) or replace it with
-#the last three lines 
-#Mac users may will probably need to uncomment the last line ( app.exec() )
-#Windows users should uncomment the last three lines and use them instead.
-if __name__ == "__main__":
-    app = PyQt5.QtWidgets.QApplication(sys.argv)
-    window = Ui()
-#    app.exec()
- 
-#    import os
-#    if not os.environ.get('SPY_UMR_ENABLED'):
-#       app.exec()    
+#Mac users need to uncomment the app.exec()  after window =Ui() and then coment the rest
+#make sure that app.exec() is all the way to the left (no indentation).
+#Windows users should uncomment the last three lines but comment the app.exec() afer window=Ui()
+
+app = PyQt5.QtWidgets.QApplication(sys.argv)
+window = Ui()
+#app.exec()
+import os
+if not os.environ.get('SPY_UMR_ENABLED'):
+    app.exec()    

@@ -11,8 +11,9 @@
 
 #note: Mac may pretend that basic.ui is basic.xml.  If it does that, 
 #actually rename the file to be .ui instead of .xml
-#Also, basic.ui and this program, called ToyGui.py,thecount.jpg, and microphone.jpt 
-#must all be in the same folder...the one you run this from
+#Also, basic.ui and this program, called ToyGui.py,thecount.jpg, and microphone.jpg 
+#must all be in the same folder...the one you run this from.
+#I'm recommending .spyder-py3, you can use whatever you want.
 #Final note:  I changed button names so that this .ui can't be confused with our previous demo
 
 #need to import some libraries: mainly PyQt5 with a few others used for random things
@@ -20,7 +21,7 @@ import sys
 import PyQt5 
 from PyQt5 import uic #gui building stuff
 
-#for mac, uncomment the next two lines. Otherwise, don't.
+#for Mac, uncomment the next two lines. Otherwise, don't.
 #import matplotlib
 #matplotlib.use('macosx')
 
@@ -73,15 +74,20 @@ class Ui(PyQt5.QtWidgets.QMainWindow):
         plt.plot(timepoints,self.myrecording) 
 
      
+ #------------------------------------------------------------------------       
+#these last lines launch the app.      
+     
+#Mac users need to uncomment the app.exec()  after window =Ui() and then coment the rest
+#make sure that app.exec() is all the way to the left (no indentation).
+#Windows users should uncomment the last three lines but comment the app.exec() afer window=Ui()
+
 app = PyQt5.QtWidgets.QApplication(sys.argv)
 window = Ui()
-   #Mac users uncomment next line and comment all following lines
-app.exec()
-#import os
-#if not os.environ.get('SPY_UMR_ENABLED'):
-#     app.exec() 
-    
-    
+#app.exec()
+import os
+if not os.environ.get('SPY_UMR_ENABLED'):
+    app.exec()  
+
 
 
 
