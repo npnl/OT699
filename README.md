@@ -1,5 +1,5 @@
 # OT699
-Course materials for OT 699: Building Technologies that Promote Health and Occupational Engagement
+Course materials for OT 699: Building Technologies that Promote Health and Occupational Engagement (please note that this github repo is actively being revised for the Spring 2023 semester!)
 
 You can find some of our course lectures uploaded to our [Youtube playlist](https://youtube.com/playlist?list=PLJSDUL80OPJ82n4D6YIAmWijNGWig4tow). The course syllabus and related documents are also included in this repo. 
 
